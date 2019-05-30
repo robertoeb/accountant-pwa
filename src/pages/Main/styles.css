@@ -6,10 +6,10 @@
   height: 100vh;
   background: linear-gradient(
       0deg,
-      rgba(133, 147, 151, 0.5),
-      rgba(55, 63, 71, 0.8)
+      rgba(133, 147, 151, 0.8),
+      rgba(55, 63, 71, 0.9)
     ),
-    url("../../assets/img/login-bg.jpg");
+    url("../../assets/img/login-bg.jpeg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
