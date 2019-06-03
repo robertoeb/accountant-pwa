@@ -1,43 +1,44 @@
-import "core-js/es/map";
-import "core-js/es/set";
-import "raf/polyfill";
-
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
-import { Container, Row, Button, Icon } from "react-materialize";
+import { Container, Navbar, NavItem, SearchForm, Row } from "react-materialize";
 
-import logo from "../../assets/img/logo.svg";
 import "./styles.css";
+import logoMini from "../../assets/img/logo-mini.svg";
 
 export default class Main extends Component {
+  onClick = () => {};
+
   render() {
     return (
       <div className="main-body">
-        <Container className="main">
+        <Navbar
+          className="main-nav"
+          brand={<img className="logo" src={logoMini} alt="Accountant Logo" />}
+          alignLinks="right"
+          fixed
+        >
+          <NavItem onClick={this.onClick}>Getting started</NavItem>
+          <NavItem href="components.html">Components</NavItem>
+        </Navbar>
+        <SearchForm />
+        <Container>
           <Row>
-            <h1>BEM VINDO!</h1>
-          </Row>
-          <Row>
-            <img src={logo} alt="" height="250px" className="responsive-img" />
-          </Row>
-          <Row>
-            <Link to="register">
-              <Button className="main-button" waves="light">
-                MINHA PRIMEIRA VEZ
-                <Icon right>arrow_forward</Icon>
-              </Button>
-            </Link>
-          </Row>
-          <Row>
-            <Link to="login">
-              <Button className="main-button button-grey" waves="light">
-                JÁ SOU CLIENTE
-                <Icon right>arrow_forward</Icon>
-              </Button>
-            </Link>
+            <h1>Pesquisar por categoria</h1>
           </Row>
         </Container>
+        <Row className="categories-row">
+          <div className="categories">
+            <div className="categories-item" active>
+              <div className="categories-item-content">Imposto de renda</div>
+            </div>
+            <div className="categories-item">
+              <div className="categories-item-content">Abrir empresa</div>
+            </div>
+            <div className="categories-item">
+              <div className="categories-item-content">Consultoria</div>
+            </div>
+          </div>
+        </Row>
       </div>
     );
   }

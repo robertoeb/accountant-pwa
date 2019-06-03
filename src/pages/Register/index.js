@@ -20,9 +20,16 @@ export default class Login extends Component {
     super(props);
     this.state = {
       activeIndex: props.initialIndex,
-      person: ""
+      person: "",
+      formRender: false
     };
   }
+
+  handleRadioGroup = event => {
+    this.setState({ person: event.target.value });
+    document.querySelector(".form").style.display = "block";
+    document.querySelector(".form").placeholder = "Teste";
+  };
 
   render() {
     return (
@@ -39,20 +46,16 @@ export default class Login extends Component {
           <Row>
             <RadioGroup
               name="person"
+              value={this.state.value}
+              onChange={this.handleRadioGroup}
               options={[
                 { label: "CPF", value: "cpf" },
                 { label: "CNPJ", value: "cnpj" }
               ]}
             />
           </Row>
-          <Row>
-            <TextInput
-              email
-              validate
-              placeholder="E-mail"
-              className="input-field"
-              id="input"
-            />
+          <Row className="form">
+            <TextInput type="number" className="input-field" id="input" />
           </Row>
           <Row>
             <TextInput
