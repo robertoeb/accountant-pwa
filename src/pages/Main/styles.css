@@ -2,9 +2,24 @@
   overflow: hidden;
   background-color: #fcfcfc;
   font-family: "Roboto", sans-serif;
+  height: 2000px;
 }
+
+#side-nav {
+  z-index: 99999 !important;
+}
+
 .main-nav {
   background-color: #373f47;
+}
+
+.main-nav-search {
+  background-color: #fcfcfc;
+  color: #373f47;
+}
+
+.main-nav-search .material-icons {
+  color: rgba(55, 63, 71, 0.7);
 }
 
 .logo {
@@ -16,10 +31,18 @@ h1 {
   text-align: center;
 }
 
+.categories-row {
+  overflow: hidden !important;
+}
+
 .categories {
   display: flex;
   overflow-x: scroll;
   height: 100px;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .categories-item {
@@ -32,19 +55,20 @@ h1 {
   white-space: nowrap;
   box-sizing: content-box;
   height: 30px;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: #e6e6e6;
 }
 
-.categories-item:active {
+.active {
   color: #b71c22;
   font-weight: 1200;
   border: 2px solid #b71c22;
   background-color: #fcfcfc;
 }
 
-.categories-item-content {
-  line-height: 30px;
+.categories-item span {
+  pointer-events: none;
 }
