@@ -2,7 +2,6 @@
   overflow: hidden;
   background-color: #fcfcfc;
   font-family: "Roboto", sans-serif;
-  height: 2000px;
 }
 
 #side-nav {
@@ -31,14 +30,14 @@ h1 {
   text-align: center;
 }
 
-.categories-row {
-  overflow: hidden !important;
-}
-
 .categories {
   display: flex;
   overflow-x: scroll;
-  height: 100px;
+  height: auto;
+  width: auto;
+  padding-left: 20px;
+  align-items: center;
+  text-align: center;
 }
 
 ::-webkit-scrollbar {
@@ -49,9 +48,8 @@ h1 {
   box-shadow: 0 1px 2px 0 rgba(55, 63, 71, 0.2),
     0 2px 6px 0 rgba(55, 63, 71, 0.19);
   border-radius: 5px;
-  margin: 0 10px;
-  padding: 30px;
-  width: 300px;
+  margin-right: 20px;
+  padding: 15px 30px;
   white-space: nowrap;
   box-sizing: content-box;
   height: 30px;
@@ -64,11 +62,22 @@ h1 {
 
 .active {
   color: #b71c22;
-  font-weight: 1200;
+  font-weight: 900;
   border: 2px solid #b71c22;
   background-color: #fcfcfc;
+  zoom: 1.1;
 }
 
 .categories-item span {
   pointer-events: none;
+}
+
+.category-card {
+  background-color: #373f47;
+  font-size: 13px;
+  text-align: center;
+}
+
+.category-card button {
+  background-color: #b71c22;
 }

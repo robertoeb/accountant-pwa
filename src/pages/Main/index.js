@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Categories from "../../components/Categories";
 
 import { Container, Row, SideNavItem, Navbar } from "react-materialize";
 
@@ -8,9 +9,19 @@ import userImage from "../../assets/img/user.png";
 import sideNavBackground from "../../assets/img/background.jpg";
 
 export default class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeIndex: props.initialIndex,
+      chosenCategory: "imposto-de-renda"
+    };
+  }
+
   setActive = event => {
     document.querySelector(".active").classList.remove("active");
     event.target.classList.add("active");
+    this.setState({ chosenCategory: event.target.dataset.category });
+    console.log(this.state.chosenCategory);
   };
 
   render() {
@@ -52,18 +63,47 @@ export default class Main extends Component {
             <h1>Pesquisar por categoria</h1>
           </Row>
         </Container>
-        <Row className="categories-row">
+        <Row>
           <div className="categories">
-            <div className="categories-item active" onClick={this.setActive}>
+            <div
+              className="categories-item active"
+              data-category="consultoria"
+              onClick={this.setActive}
+            >
+              <span>Consultoria</span>
+            </div>
+            <div
+              className="categories-item"
+              data-category="finanças"
+              onClick={this.setActive}
+            >
+              <span>Finanças</span>
+            </div>
+            <div
+              className="categories-item"
+              data-category="imposto-de-renda"
+              onClick={this.setActive}
+            >
               <span>Imposto de renda</span>
             </div>
-            <div className="categories-item" onClick={this.setActive}>
+            <div
+              className="categories-item"
+              data-category="abrir-empresa"
+              onClick={this.setActive}
+            >
               <span>Abrir empresa</span>
             </div>
-            <div className="categories-item" onClick={this.setActive}>
+            <div
+              className="categories-item"
+              data-category="consultoria"
+              onClick={this.setActive}
+            >
               <span>Consultoria</span>
             </div>
           </div>
+        </Row>
+        <Row>
+          <Categories data={this.state} />
         </Row>
       </div>
     );
