@@ -28,6 +28,7 @@ export default class Login extends Component {
               placeholder="E-mail"
               className="input-field"
               id="input"
+              value="jhondoe@mail.com"
             />
           </Row>
           <Row>
@@ -37,13 +38,16 @@ export default class Login extends Component {
               placeholder="Senha"
               className="input-field"
               id="input"
+              value="*******"
             />
           </Row>
           <Row>
-            <Button type="submit" waves="light" className="button">
-              Entrar
-              <Icon right>send</Icon>
-            </Button>
+            <Link to="jobs">
+              <Button type="submit" waves="light" className="button">
+                Entrar
+                <Icon right>send</Icon>
+              </Button>
+            </Link>
           </Row>
           <Row>
             <Link className="link" to="lost-password">

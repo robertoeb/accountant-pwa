@@ -1,0 +1,98 @@
+.jobs-body {
+  overflow: hidden;
+  background-color: #fcfcfc;
+  font-family: "Roboto", sans-serif;
+}
+
+#side-nav {
+  z-index: 99999 !important;
+}
+
+.jobs-nav {
+  background-color: #373f47;
+}
+
+.jobs-nav-search {
+  background-color: #fcfcfc;
+  color: #373f47;
+}
+
+.jobs-nav-search .material-icons {
+  color: rgba(55, 63, 71, 0.7);
+}
+
+.logo {
+  height: 46px;
+  margin-top: 5px;
+}
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.categories {
+  display: flex;
+  overflow-x: scroll;
+  height: auto;
+  width: auto;
+  padding-left: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.categories-item {
+  box-shadow: 0 1px 2px 0 rgba(55, 63, 71, 0.2),
+    0 2px 6px 0 rgba(55, 63, 71, 0.19);
+  border-radius: 5px;
+  margin-right: 20px;
+  padding: 15px 30px;
+  white-space: nowrap;
+  box-sizing: content-box;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #e6e6e6;
+}
+
+.active {
+  color: #b71c22;
+  font-weight: 900;
+  border: 2px solid #b71c22;
+  background-color: #fcfcfc;
+  zoom: 1.1;
+}
+
+.categories-item span {
+  pointer-events: none;
+}
+
+.category-card {
+  background-color: #373f47;
+  font-size: 13px;
+  text-align: center;
+}
+
+.category-card button {
+  background-color: #b71c22;
+}
+
+.card-description {
+  text-align: left;
+}
+
+.main-footer {
+  background-color: #b71c22;
+  text-align: center;
+}
+
+.main-footer ul {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
