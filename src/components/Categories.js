@@ -2,12 +2,6 @@ import React, { Component } from "react";
 import { Container, Row, Col, Card, Button } from "react-materialize";
 
 export default class components extends Component {
-  setTitle = () => {
-    let category = this.props.data.chosenCategory;
-
-    return " Imposto de Renda";
-  };
-
   render() {
     return (
       <Container>
@@ -16,12 +10,8 @@ export default class components extends Component {
             <Card
               className="category-card"
               textClassName="white-text"
-              title={
-                <span>
-                  Geração de conteúdo para blog e redes sociais de escritório de
-                  contabilidade
-                </span>
-              }
+              title="Geração de conteúdo para blog e redes sociais de escritório de
+                  contabilidade"
               actions={[<Button waves="light">FAZER UMA PROPOSTA</Button>]}
             >
               <div className="card-description">
@@ -35,7 +25,7 @@ export default class components extends Component {
             <Card
               className="category-card"
               textClassName="white-text"
-              title={<span>Conteúdo Contábil para Blog</span>}
+              title="Conteúdo Contábil para Blog"
               actions={[<Button waves="light">FAZER UMA PROPOSTA</Button>]}
             >
               <div className="card-description">
@@ -46,9 +36,7 @@ export default class components extends Component {
             <Card
               className="category-card"
               textClassName="white-text"
-              title={
-                <span>Contador para consultoria legalizar empresa parada</span>
-              }
+              title="Contador para consultoria legalizar empresa parada"
               actions={[<Button waves="light">FAZER UMA PROPOSTA</Button>]}
             >
               <div className="card-description">
@@ -63,9 +51,7 @@ export default class components extends Component {
             <Card
               className="category-card"
               textClassName="white-text"
-              title={
-                <span>Contador atualizado que tenha noção de tecnologia</span>
-              }
+              title="Contador atualizado que tenha noção de tecnologia"
               actions={[<Button waves="light">FAZER UMA PROPOSTA</Button>]}
             >
               <div className="card-description">
@@ -79,12 +65,8 @@ export default class components extends Component {
             <Card
               className="category-card"
               textClassName="white-text"
-              title={
-                <span>
-                  Especialista Fiscal para parametrização de tributos em
-                  E-commerce
-                </span>
-              }
+              title="Especialista Fiscal para parametrização de tributos em
+                  E-commerce"
               actions={[<Button waves="light">FAZER UMA PROPOSTA</Button>]}
             >
               <div className="card-description">

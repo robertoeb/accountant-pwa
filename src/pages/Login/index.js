@@ -27,8 +27,8 @@ export default class Login extends Component {
               validate
               placeholder="E-mail"
               className="input-field"
-              id="input"
               value="jhondoe@mail.com"
+              readOnly
             />
           </Row>
           <Row>
@@ -37,8 +37,8 @@ export default class Login extends Component {
               validate
               placeholder="Senha"
               className="input-field"
-              id="input"
               value="*******"
+              readOnly
             />
           </Row>
           <Row>

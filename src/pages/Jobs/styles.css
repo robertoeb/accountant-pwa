@@ -4,6 +4,12 @@
   font-family: "Roboto", sans-serif;
 }
 
+.jobs-body h1 {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
 #side-nav {
   z-index: 99999 !important;
 }
@@ -25,10 +31,6 @@
   height: 46px;
   margin-top: 5px;
 }
-h1 {
-  font-size: 30px;
-  text-align: center;
-}
 
 .categories {
   display: flex;
@@ -38,10 +40,6 @@ h1 {
   padding-left: 20px;
   align-items: center;
   text-align: center;
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 .categories-item {
@@ -60,7 +58,7 @@ h1 {
   background-color: #e6e6e6;
 }
 
-.active {
+.category-active {
   color: #b71c22;
   font-weight: 900;
   border: 2px solid #b71c22;

@@ -27,7 +27,7 @@
   color: #373f47;
 }
 
-#input:focus {
+.input-field input:focus {
   border-bottom: 1px solid #b71c22;
   box-shadow: 0 1px 0 0 #b71c22;
 }

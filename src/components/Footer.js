@@ -1,37 +1,27 @@
 import React, { Component } from "react";
-import { Footer, Icon } from "react-materialize";
-
-// import { Container } from './styles';
+import { Footer } from "react-materialize";
 
 export default class components extends Component {
   render() {
     return (
       <Footer
-        copyrights={
-          <div>
-            © 2019 Accountant
-            <br />
-            <a target="_blank" href="https://www.robertoeb.com">
-              www.robertoeb.com
-            </a>
-          </div>
-        }
+        copyrights="© 2019 Accountant"
         links={
           <ul>
             <li>
-              <i class="fab fa-facebook-f" />
+              <i className="fab fa-facebook-f" />
             </li>
             <li>
-              <i class="fab fa-twitter" />
+              <i className="fab fa-twitter" />
             </li>
             <li>
-              <i class="fab fa-linkedin-in" />
+              <i className="fab fa-linkedin-in" />
             </li>
             <li>
-              <i class="fab fa-pinterest-p" />
+              <i className="fab fa-pinterest-p" />
             </li>
             <li>
-              <i class="fab fa-instagram" />
+              <i className="fab fa-instagram" />
             </li>
           </ul>
         }
