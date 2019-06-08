@@ -82,12 +82,26 @@
   color: #fcfcfc;
 }
 
-.category-card button {
+.card-description {
+  text-align: left;
+}
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 20px !important;
+}
+
+.category-card button,
+.category-card button:focus,
+.category-card button:hover {
   background-color: #b71c22;
 }
 
-.card-description {
-  text-align: left;
+h3.result {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+  color: #b71c22;
 }
 
 .main-footer {

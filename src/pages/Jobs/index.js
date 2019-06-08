@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Navigation from "../../components/Navigation";
 import JobsItem from "../../components/JobsItem";
 import jobs from "../../assets/jobs.json";
+import Categories from "../../components/Categories";
 import Footer from "../../components/Footer";
 
 import { Container, Row } from "react-materialize";
@@ -14,18 +15,28 @@ export default class Jobs extends Component {
     super(props);
 
     this.jobs = jobs.results;
+
     this.state = {
-      chosenCategory: "imposto-de-renda",
+      chosenCategory: "consultoria",
       searchString: "",
       results: []
     };
 
     this.handleChange = this.handleChange.bind(this);
+    this.setActive = this.setActive.bind(this);
   }
 
   componentDidMount() {
     this.setState({ results: this.jobs });
   }
+
+  setActive = event => {
+    document
+      .querySelector(".category-active")
+      .classList.remove("category-active");
+    event.target.classList.add("category-active");
+    this.setState({ chosenCategory: event.target.dataset.category });
+  };
 
   handleChange(event) {
     this.setState({ searchString: event.target.value }, () => {
@@ -51,15 +62,6 @@ export default class Jobs extends Component {
     this.setState({ results: this.jobs });
   };
 
-  setActive = event => {
-    document
-      .querySelector(".category-active")
-      .classList.remove("category-active");
-    event.target.classList.add("category-active");
-    this.setState({ chosenCategory: event.target.dataset.category });
-    console.log(this.state.chosenCategory);
-  };
-
   render() {
     return (
       <div className="jobs-body">
@@ -73,11 +75,15 @@ export default class Jobs extends Component {
                   id="search"
                   onChange={this.handleChange}
                   value={this.state.searchString}
+                  autoComplete="off"
                 />
                 <label htmlFor="search" className="label-icon">
                   <Icon className="search-icons">search</Icon>
                 </label>
-                <i className="material-icons" onClick={this.cleanSearch}>
+                <i
+                  className="material-icons close-icon"
+                  onClick={this.cleanSearch}
+                >
                   close
                 </i>
               </div>
@@ -90,58 +96,29 @@ export default class Jobs extends Component {
           </Row>
         </Container>
         <Row>
-          <div className="categories">
-            <div
-              className="categories-item category-active"
-              data-category="consultoria"
-              onClick={this.setActive}
-            >
-              <span>Consultoria</span>
-            </div>
-            <div
-              className="categories-item"
-              data-category="finanças"
-              onClick={this.setActive}
-            >
-              <span>Finanças</span>
-            </div>
-            <div
-              className="categories-item"
-              data-category="imposto-de-renda"
-              onClick={this.setActive}
-            >
-              <span>Imposto de renda</span>
-            </div>
-            <div
-              className="categories-item"
-              data-category="abrir-empresa"
-              onClick={this.setActive}
-            >
-              <span>Abrir empresa</span>
-            </div>
-            <div
-              className="categories-item"
-              data-category="consultoria"
-              onClick={this.setActive}
-            >
-              <span>Consultoria</span>
-            </div>
-          </div>
+          <Categories handler={this.setActive} />
         </Row>
         <Row className="cards">
           {this.state.results.length > 0 ? (
-            this.state.results.map((item, index) => (
-              <JobsItem
-                title={item.title}
-                description={item.description}
-                term={this.state.searchString}
-                key={index}
-              />
-            ))
+            this.state.results.map((item, index) =>
+              item.category === this.state.chosenCategory ||
+              this.state.searchString !== "" ? (
+                <JobsItem
+                  title={item.title}
+                  description={item.description}
+                  term={this.state.searchString}
+                  key={index}
+                />
+              ) : (
+                false
+              )
+            )
           ) : this.state.searchString !== "" ? (
-            <h3 className="result">
-              Nenhum resultado para "{this.state.searchString}"
-            </h3>
+            <Container>
+              <h3 className="result">
+                Nenhum resultado para "{this.state.searchString}"
+              </h3>
+            </Container>
           ) : (
             ""
           )}

@@ -37,17 +37,13 @@ export default class components extends Component {
             <SideNavItem href="#!third" icon="build">
               Trabalhos em andamento
             </SideNavItem>
-            <SideNavItem href="#!third" icon="search">
+            <SideNavItem href="jobs" icon="search">
               Procurar trabalhos
             </SideNavItem>
             <SideNavItem divider />
             <SideNavItem subheader>Suporte</SideNavItem>
-            <SideNavItem href="#!third" icon="phone">
-              +55 31 4949-0000
-            </SideNavItem>
-            <SideNavItem href="#!third" icon="help">
-              Central de ajuda
-            </SideNavItem>
+            <SideNavItem icon="phone">+55 31 4949-0000</SideNavItem>
+            <SideNavItem icon="help">Central de ajuda</SideNavItem>
             <SideNavItem divider />
             <SideNavItem waves href="/" icon="exit_to_app">
               Sair

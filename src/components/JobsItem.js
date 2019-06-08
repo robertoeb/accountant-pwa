@@ -9,7 +9,7 @@ const JobsItem = ({ title, description, category }) => (
           className="category-card"
           textClassName="white-text"
           title={title}
-          actions={[<Button waves="light">FAZER UMA PROPOSTA</Button>]}
+          actions={[<Button>FAZER UMA PROPOSTA</Button>]}
         >
           <div className="card-description">{description}</div>
         </Card>
