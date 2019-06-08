@@ -1,0 +1,32 @@
+{
+  "title": "Accountant Jobs",
+  "version": 1.0,
+  "href": "http://www.iaccountant.ml/jobs",
+  "results": [
+    {
+      "title": "Geração de conteúdo para blog e redes sociais de escritório de contabilidade",
+      "description": "Precisamos de geração de conteúdo como artigos científicos para blog e posts em redes sociais para um escritório de contabilidade, visando a captação de novos potenciais clientes com temas contábeis atualizados como abertura de empresa e notícias.",
+      "category": "Consultoria"
+    },
+    {
+      "title": "Conteúdo Contábil para Blog",
+      "description": "Criar conteúdos semanais para o blog com o objetivo de atrair visitantes.",
+      "category": "Consultoria"
+    },
+    {
+      "title": "Contador para consultoria legalizar empresa parada",
+      "description": "-Calcular os custos - orientar para legalizar empresa parada a 10 anos. -Mudar de ramo de atividade. -excluir um sócio. obs: fazer um relatório e planilha com custos. Caso de certo poderemos fechar negócio para cuidar da empresa",
+      "category": "Consultoria"
+    },
+    {
+      "title": "Contador atualizado que tenha noção de tecnologia",
+      "description": "Precisamos de um contador que tenha o CRC, seja atualizado no que diz respeito à tendencias do mercado contabil e suas possibilidades e, que tenha interesse em uma parceria. Somos focados no setor de consultoria de sistemas e, o projeto para a contabilidade seguirá a mesma linha.",
+      "category": "Consultoria"
+    },
+    {
+      "title": "Especialista Fiscal para parametrização de tributos em E-commerce",
+      "description": "Parametrizar sistema de e-commerce quanto as informações de impostos para a emissão de Notas fiscais, principalmente com substituição tributária. Atuamos no segmento Ferramentas Diamantadas e estamos iniciando atividade em São Paulo. O sistema utilizado é o Bling.",
+      "category": "Consultoria"
+    }
+  ]
+}

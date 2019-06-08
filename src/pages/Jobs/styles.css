@@ -2,6 +2,7 @@
   overflow: hidden;
   background-color: #fcfcfc;
   font-family: "Roboto", sans-serif;
+  color: #373f47;
 }
 
 .jobs-body h1 {
@@ -18,13 +19,12 @@
   background-color: #373f47;
 }
 
-.jobs-nav-search {
-  background-color: #fcfcfc;
-  color: #373f47;
+.search-bar {
+  background-color: #fff;
 }
 
-.jobs-nav-search .material-icons {
-  color: rgba(55, 63, 71, 0.7);
+.search-icons {
+  color: #373f47 !important;
 }
 
 .logo {
@@ -62,18 +62,24 @@
   color: #b71c22;
   font-weight: 900;
   border: 2px solid #b71c22;
-  background-color: #fcfcfc;
-  zoom: 1.1;
+  background-color: #fff;
+  zoom: 1.2;
 }
 
 .categories-item span {
   pointer-events: none;
 }
 
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .category-card {
   background-color: #373f47;
   font-size: 13px;
   text-align: center;
+  color: #fcfcfc;
 }
 
 .category-card button {
@@ -86,6 +92,7 @@
 
 .main-footer {
   background-color: #b71c22;
+  color: #fcfcfc;
   text-align: center;
 }
 
