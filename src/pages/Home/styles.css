@@ -1,0 +1,105 @@
+h1 {
+  letter-spacing: 2px;
+}
+
+.main-home {
+  overflow: hidden;
+  background-color: #fcfcfc;
+  font-family: "Roboto", sans-serif;
+  color: #fcfcfc;
+  text-align: center;
+}
+
+.main-hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background: linear-gradient(
+      0deg,
+      rgba(133, 147, 151, 0.65),
+      rgba(55, 63, 71, 0.75)
+    ),
+    url("../../assets/img/home-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main-hero h1 {
+  margin-top: 10vh;
+}
+
+.main-hero button {
+  height: 50px;
+  background-color: #b71c22;
+}
+
+.main-hero p {
+  font-size: 18px;
+}
+
+.how-it-works {
+  color: #373f47;
+}
+
+.hiw-items {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  text-align: left;
+  font-size: 13px;
+
+  background-repeat: no-repeat;
+  background-size: 100px;
+  height: 100px;
+}
+
+.hiw-items p {
+  box-sizing: content-box;
+}
+
+.hiw-items strong {
+  font-size: 15px;
+}
+
+.hiw-items img {
+  margin-right: 10px;
+}
+
+.bg-red {
+  background-color: #b71c22;
+}
+
+.bg-gray {
+  background-color: #373f47;
+}
+
+.testimonial-author {
+  display: flex;
+  white-space: nowrap;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.testimonial-author img {
+  height: 80px;
+}
+
+.author-description {
+  margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.author-description h2 {
+  margin: 0;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.wd-100 {
+  width: 100%;
+}

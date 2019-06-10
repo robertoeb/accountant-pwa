@@ -42,7 +42,7 @@ export default class Login extends Component {
             />
           </Row>
           <Row>
-            <Link to="jobs">
+            <Link to="home">
               <Button type="submit" waves="light" className="button">
                 Entrar
                 <Icon right>send</Icon>

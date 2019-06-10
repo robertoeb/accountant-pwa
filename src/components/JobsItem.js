@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-materialize";
 
-const JobsItem = ({ title, description, category }) => (
+const JobsItem = ({ title, description }) => (
   <Container>
     <Row>
       <Col m={6} s={12}>

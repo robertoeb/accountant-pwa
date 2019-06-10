@@ -26,7 +26,7 @@ export default class components extends Component {
                 email: "Contador"
               }}
             />
-            <SideNavItem href="/jobs" icon="home">
+            <SideNavItem href="/home" icon="home">
               Início
             </SideNavItem>
             <SideNavItem divider />

@@ -33,6 +33,10 @@
       rel="stylesheet"
     />
     <style>
+      body {
+        user-select: none;
+      }
+
       ::-webkit-scrollbar {
         display: none;
       }
@@ -56,5 +60,8 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
     ></script>
     <script src="https://kit.fontawesome.com/18a56d59ee.js"></script>
+    <script>
+      document.oncontextmenu = new Function("return false;");
+    </script>
   </body>
 </html>
