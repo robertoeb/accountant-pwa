@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
+import { Link } from "react-router-dom";
 
 import { Container, Button, Row, Carousel } from "react-materialize";
 
@@ -25,10 +26,40 @@ export default class Home extends Component {
               Aqui você enconta contadores freelancers prontos para trabalhar no
               seu projeto.
             </p>
-            <Button className="mt-30 wd-100">Prestamos consultoria</Button>
-            <Button className="mt-30 wd-100">Cuidamos das suas finanças</Button>
-            <Button className="mt-30 wd-100">Abrimos sua empresa</Button>
-            <Button className="mt-30 wd-100">Fazemos auditoria</Button>
+            <Link
+              to={{
+                pathname: "/jobs",
+                state: { category: "consultoria" }
+              }}
+            >
+              <Button className="mt-30 wd-100">Prestamos consultoria</Button>
+            </Link>
+            <Link
+              to={{
+                pathname: "/jobs",
+                state: { category: "finanças" }
+              }}
+            >
+              <Button className="mt-30 wd-100">
+                Cuidamos das suas finanças
+              </Button>
+            </Link>
+            <Link
+              to={{
+                pathname: "/jobs",
+                state: { category: "abrir-empresa" }
+              }}
+            >
+              <Button className="mt-30 wd-100">Abrimos sua empresa</Button>
+            </Link>
+            <Link
+              to={{
+                pathname: "/jobs",
+                state: { category: "auditoria" }
+              }}
+            >
+              <Button className="mt-30 wd-100">Fazemos auditoria</Button>
+            </Link>
           </Container>
         </div>
         <section className="how-it-works">

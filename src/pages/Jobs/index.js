@@ -28,9 +28,16 @@ export default class Jobs extends Component {
 
   componentDidMount() {
     this.setState({ results: this.jobs });
+    return !this.props.location.state ? false : this.setCategory();
   }
 
+  setCategory = () => {
+    let category = this.props.location.state.category;
+    document.querySelector(`[data-category=${category}]`).click();
+  };
+
   setActive = event => {
+    console.log(event);
     document
       .querySelector(".category-active")
       .classList.remove("category-active");
