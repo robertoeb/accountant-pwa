@@ -13,6 +13,7 @@
 
 #side-nav {
   z-index: 99999 !important;
+  text-align: left;
 }
 
 .jobs-nav {
@@ -78,8 +79,8 @@
 .category-card {
   background-color: #373f47;
   font-size: 13px;
-  text-align: center;
   color: #fcfcfc;
+  text-align: center;
 }
 
 .card-description {
@@ -87,14 +88,19 @@
 }
 
 .card-title {
-  font-size: 20px;
+  font-size: 18px !important;
   margin-bottom: 20px !important;
+  text-align: center;
 }
 
 .category-card button,
 .category-card button:focus,
 .category-card button:hover {
   background-color: #b71c22;
+}
+
+div.card-action a {
+  margin: 0;
 }
 
 h3.result {

@@ -5,6 +5,7 @@ import Main from "./pages/Main";
 import Home from "./pages/Home";
 import Jobs from "./pages/Jobs";
 import Login from "./pages/Login";
+import Proposal from "./pages/Proposal";
 
 const Routes = () => (
   <BrowserRouter>
@@ -12,6 +13,7 @@ const Routes = () => (
       <Route path="/" exact component={Main} />
       <Route path="/home" exact component={Home} />
       <Route path="/jobs" exact component={Jobs} />
+      <Route path="/proposal" exact component={Proposal} />
       <Route path="/login" exact component={Login} />
     </Switch>
   </BrowserRouter>

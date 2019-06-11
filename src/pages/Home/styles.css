@@ -35,6 +35,12 @@ h1 {
   background-color: #b71c22;
 }
 
+.main-hero button,
+.main-hero button:focus,
+.main-hero button:hover {
+  background-color: #b71c22;
+}
+
 .main-hero p {
   font-size: 18px;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-materialize";
+import { Link } from "react-router-dom";
 
 const JobsItem = ({ title, description }) => (
   <Container>
@@ -9,7 +10,16 @@ const JobsItem = ({ title, description }) => (
           className="category-card"
           textClassName="white-text"
           title={title}
-          actions={[<Button>FAZER UMA PROPOSTA</Button>]}
+          actions={[
+            <Link
+              to={{
+                pathname: "/proposal",
+                state: { job: title }
+              }}
+            >
+              <Button>FAZER UMA PROPOSTA</Button>
+            </Link>
+          ]}
         >
           <div className="card-description">{description}</div>
         </Card>
