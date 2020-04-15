@@ -1,0 +1,123 @@
+.jobs-body {
+  overflow: hidden;
+  background-color: #f3f3f3;
+  font-family: "Roboto", sans-serif;
+  color: #373f47;
+}
+
+.jobs-body h1 {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#side-nav {
+  z-index: 99999 !important;
+  text-align: left;
+}
+
+.jobs-nav {
+  background-color: #373f47;
+}
+
+.search-bar {
+  background-color: #fff;
+}
+
+.search-icons {
+  color: #373f47 !important;
+}
+
+.logo {
+  height: 46px;
+  margin-top: 5px;
+}
+
+.categories {
+  display: flex;
+  overflow-x: scroll;
+  height: auto;
+  width: auto;
+  padding-left: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.categories-item {
+  box-shadow: 0 1px 2px 0 rgba(55, 63, 71, 0.2),
+    0 2px 6px 0 rgba(55, 63, 71, 0.19);
+  border-radius: 5px;
+  margin-right: 20px;
+  padding: 15px 30px;
+  white-space: nowrap;
+  box-sizing: content-box;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #e6e6e6;
+}
+
+.category-active {
+  color: #b71c22;
+  font-weight: 900;
+  border: 2px solid #b71c22;
+  background-color: #fff;
+  zoom: 1.2;
+}
+
+.categories-item span {
+  pointer-events: none;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.category-card {
+  background-color: #373f47;
+  font-size: 13px;
+  color: #fcfcfc;
+  text-align: center;
+}
+
+.card-description {
+  text-align: left;
+}
+
+.card-title {
+  font-size: 18px !important;
+  margin-bottom: 20px !important;
+  text-align: center;
+}
+
+.category-card button,
+.category-card button:focus,
+.category-card button:hover {
+  background-color: #b71c22;
+}
+
+div.card-action a {
+  margin: 0;
+}
+
+h3.result {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+  color: #b71c22;
+}
+
+.main-footer {
+  background-color: #b71c22;
+  color: #fcfcfc;
+  text-align: center;
+}
+
+.main-footer ul {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}

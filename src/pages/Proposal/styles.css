@@ -1,0 +1,59 @@
+.main-proposal {
+  background-color: #f3f3f3;
+  font-family: "Roboto", sans-serif;
+  color: #373f47;
+}
+
+.main-proposal h1 {
+  margin: 30px 0;
+  white-space: nowrap;
+  font-size: 22px;
+}
+
+.top-proposal {
+  text-align: center;
+}
+
+.input-field {
+  margin: 0;
+}
+
+.input-field:focus {
+  border-bottom: 1px solid #b71c22 !important;
+  box-shadow: 0 1px 0 0 #b71c22 !important;
+}
+
+.input-field textarea,
+.input-field label {
+  color: #b71c22 !important;
+}
+
+.main-proposal button,
+.main-proposal button:focus,
+.main-proposal button:hover {
+  background-color: #b71c22;
+}
+
+.button {
+  width: 100% !important;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.modal-content h4 {
+  text-align: center;
+  white-space: nowrap;
+  font-size: 28px;
+}
+
+.modal-content .row {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.modal-footer {
+  display: none;
+}
