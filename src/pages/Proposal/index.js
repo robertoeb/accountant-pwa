@@ -15,7 +15,7 @@ import {
 
 import "./styles.css";
 
-const Proposal = () => (
+const Proposal = (props) => (
   <div className="main-proposal">
     <Navigation />
     <Container>
@@ -24,7 +24,7 @@ const Proposal = () => (
           Fazendo proposta para
           <br />
         </h1>
-        <p>{this.props.location.state.job}</p>
+        <p>{props.location.state.job}</p>
       </Row>
       <Row>
         <TextInput
