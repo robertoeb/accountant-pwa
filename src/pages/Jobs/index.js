@@ -3,7 +3,7 @@ import Navigation from "../../components/Navigation";
 import JobsItem from "../../components/JobsItem";
 import jobs from "../../assets/jobs.json";
 import Categories from "../../components/Categories";
-import Footer from "../../components/Footer";
+import PageFooter from "../../components/PageFooter";
 
 import { Container, Row } from "react-materialize";
 
@@ -11,33 +11,33 @@ import "./styles.css";
 import Icon from "react-materialize/lib/Icon";
 
 export default class Jobs extends Component {
+  ss;
   constructor(props) {
     super(props);
 
-    this.jobs = jobs.results;
-
     this.state = {
-      chosenCategory: "consultoria",
+      chosenCategory: "all",
       searchString: "",
-      results: []
+      results: [],
     };
-
-    this.handleChange = this.handleChange.bind(this);
-    this.setActive = this.setActive.bind(this);
   }
 
   componentDidMount() {
-    this.setState({ results: this.jobs });
-    return !this.props.location.state ? false : this.setCategory();
+    this.setState({ results: jobs.results });
+
+    if (this.props.location.state) {
+      this.setCategory(this.props.location.state.category);
+    }
   }
 
-  setCategory = () => {
-    let category = this.props.location.state.category;
-    document.querySelector(`[data-category=${category}]`).click();
+  setCategory = (category) => {
+    const element = document.querySelector(`[data-category=${category}]`);
+    element.click();
+    element.classList.add("category-active");
+    element.scrollIntoView();
   };
 
-  setActive = event => {
-    console.log(event);
+  setActive = (event) => {
     document
       .querySelector(".category-active")
       .classList.remove("category-active");
@@ -56,7 +56,7 @@ export default class Jobs extends Component {
     let term = this.state.searchString;
     let regex = new RegExp(term, "i");
 
-    filter = jobs.results.filter(function(item) {
+    filter = jobs.results.filter(function (item) {
       if (regex.test(item.title) || regex.test(item.description)) return true;
       return false;
     });
@@ -66,7 +66,7 @@ export default class Jobs extends Component {
 
   cleanSearch = () => {
     this.setState({ searchString: "" });
-    this.setState({ results: this.jobs });
+    this.setState({ results: jobs.results });
   };
 
   render() {
@@ -108,6 +108,7 @@ export default class Jobs extends Component {
         <Row className="cards">
           {this.state.results.length > 0 ? (
             this.state.results.map((item, index) =>
+              this.state.chosenCategory === "all" ||
               item.category === this.state.chosenCategory ||
               this.state.searchString !== "" ? (
                 <JobsItem
@@ -130,7 +131,7 @@ export default class Jobs extends Component {
             ""
           )}
         </Row>
-        <Footer />
+        <PageFooter />
       </div>
     );
   }
